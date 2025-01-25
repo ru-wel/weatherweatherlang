@@ -1,5 +1,14 @@
-<div *ngIf="weatherData">
+<!-- <div *ngIf="weatherData">
     <h2>Weather in {{ weatherData.name }}</h2>
-    <!-- <p>Temperature: {{ weatherData.main.temp }}°C</p>
-    <p>Condition: {{ weatherData.weather[0].description }}</p> -->
+    <p>Temperature: {{ weatherData.main.temp }}°C</p>
+    <p>Condition: {{ weatherData.weather[0].description }}</p>
+</div> -->
+
+<div class="container text-center" *ngIf="weatherData">
+    <ul id="results">
+        <h2>Weather in {{ weatherData.location.name }}, {{ weatherData.location.country }}</h2>
+        <h3>Current Temperature: {{ weatherData.current.temperature }}°C</h3>
+        <p>{{ weatherData.current.weather_descriptions }}</p>
+        <img [src]="weatherData.current.weather_icons" alt="">
+    </ul>
 </div>
