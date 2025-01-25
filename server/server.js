@@ -6,7 +6,11 @@ import weatherRoute from './routes/weather.js'
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://localhost:3000',
+    methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
+    exposedHeaders: ['Content-Disposition']
+}));
 
 app.use((err, req, res, next) => {
     console.log(err.message);
