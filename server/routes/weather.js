@@ -9,6 +9,7 @@ const router = express.Router();
 router.get('/:location', async (req, res) => {
     const { location } = req.params;
     const apiKey = process.env.API_KEY
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
 
     try {
         const response = await axios.get(

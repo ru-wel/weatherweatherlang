@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { SearchComponent } from './components/search/search.component';
 import { WeatherComponent } from './components/weather/weather.component';
 
